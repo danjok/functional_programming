@@ -90,7 +90,7 @@ object classes {
  * *
  * IntSet
  * *
- */
+  */
 //Persistent data structure
 //at every insert of a node
 //the part of tree in which you insert the new value is replciated
@@ -165,4 +165,5 @@ class Sub extends Base {
    */
 	//dynamic method dispatch:
 	//the code invoked by a method call depends on the runtime type of the object containing the object
+	//This concept is analogous to calls to higher-order functions
 }
