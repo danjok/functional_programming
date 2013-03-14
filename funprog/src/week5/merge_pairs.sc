@@ -71,8 +71,8 @@ object merge_pairs {
   msortParam(words)((x, y) => x.compareTo(y) < 0) //> res2: List[java.lang.String] = List(a, c, d, v)
   //type is inferred
   "a".compareTo("b")                              //> res3: Int = -1
-	 
-	 /**
+
+  /**
    * *
    * 3) MSORT WITH PARAMETER USING ORDERING
    * *
@@ -101,15 +101,15 @@ object merge_pairs {
   }                                               //> msortParamOrder: [T](xs: List[T])(ord: scala.math.Ordering[T])List[T]
 
   msortParamOrder(words)(Ordering.String)         //> res4: List[java.lang.String] = List(a, c, d, v)
-  
+
   /**
    * *
    * 4) MSORT WITH IMPLICIT PARAMETER
    * *
    */
- 	//Compile will figure out the right implicit type based on the demanding type
- 	
- 	def msortImplicit[T](xs: List[T])(implicit ord: Ordering[T]): List[T] = {
+  //Compile will figure out the right implicit type based on the demanding type
+
+  def msortImplicit[T](xs: List[T])(implicit ord: Ordering[T]): List[T] = {
     val n = xs.length / 2
     if (n == 0) xs
     else {
@@ -131,5 +131,5 @@ object merge_pairs {
                                                   //| ]
 
   msortImplicit(words)                            //> res5: List[java.lang.String] = List(a, c, d, v)
- 	 
+
 }
